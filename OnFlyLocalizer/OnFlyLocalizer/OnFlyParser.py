@@ -2,7 +2,11 @@ import ntpath
 import re
 from argparse import ArgumentParser
 
-import Configuration
+from OnFlyLocalizer.Configuration import *
+from OnFlyLocalizer.FileProcessor import process_file
+from OnFlyLocalizer.FilesListReader import read_file
+from OnFlyLocalizer.LocalizedStringGenerator import generate
+from OnFlyLocalizer.LocalizedStringsParser import parse
 
 parser = ArgumentParser()
 parser.add_argument("-s", "--source-path", dest="spath", type=str, help="Option to pass path to folder source code")
