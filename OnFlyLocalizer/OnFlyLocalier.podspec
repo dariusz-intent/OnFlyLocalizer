@@ -19,6 +19,6 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/IljaKosynkin/OnFlyLocalizer.git", :tag => "v1.0.0" }
 
-  s.source_files  = "OnFlyLocalizer", "OnFlyLocalizer/*.{h,m,py,swift,sh}"
+  s.source_files  = "OnFlyLocalizer", "OnFlyLocalizer/**/*.{h,m,py,swift,sh}"
   s.exclude_files = "Classes/Exclude"
 end

@@ -1,2 +1,2 @@
 #!/bin/bash
-python $SRCROOT/OnFlyParser.py -s $SRCROOT/$1 -p $1
+python OnFlyParser.py -s $SRCROOT/$1 -p $1
