@@ -2,8 +2,8 @@ def generate(path, name, keys, table_name):
     generated_file = open(path + "/" + name + ".swift", 'w+')
     generated_file.write("import Foundation\n\n")
 
-    generated_file.write("static var currentBundle: Bundle?")
-    generated_file.write("static var currentLanguageCode: String?")
+    generated_file.write("static var currentBundle: Bundle?\n")
+    generated_file.write("static var currentLanguageCode: String?\n\n")
 
     generated_file.write("func getBundle() -> Bundle {\n")
     generated_file.write("\tlet code = Language.getCurrentLanguage().rawValue\n\n")

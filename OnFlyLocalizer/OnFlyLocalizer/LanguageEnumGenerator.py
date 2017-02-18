@@ -12,7 +12,7 @@ def generate_enum(path, localizations):
         enum_file.write("\tprivate static var currentLanguage: Language?\n\n")
 
         for localization in localizations:
-            enum_file.write("\tcase " + localization + " = " + localization + "\n")
+            enum_file.write("\tcase " + localization + " = \"" + localization + "\"\n")
         enum_file.write("\tcase Undefined = \"\"\n\n")
 
         enum_file.write("\tfunc getCurrentLanguage() -> Language {\n")

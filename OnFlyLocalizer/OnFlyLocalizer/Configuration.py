@@ -46,7 +46,7 @@ def read_configuration(path):
     for line in conf.readlines():
         splitted = line.split('=')
         if len(splitted) == 2:
-            configuration[splitted[0]] = splitted[1]
+            configuration[splitted[0]] = splitted[1].strip()
 
     conf.close()
 
@@ -56,6 +56,6 @@ def synchronize_configuration(path, conf):
     file = open(get_full_path_to_conf(path), 'w+')
 
     for key in conf:
-        file.write(key + "=" + conf[key])
+        file.write(key + "=" + str(conf[key]) + "\n")
 
     file.close()

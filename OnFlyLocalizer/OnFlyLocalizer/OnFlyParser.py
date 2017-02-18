@@ -1,28 +1,35 @@
 import ntpath
+import os
 import re
 from argparse import ArgumentParser
 
-import Configuration
-import FileProcessor
-import FilesListReader
-import LanguageEnumGenerator
-import LocalizedStringsParser
+from Configuration import *
+from FileProcessor import *
+from FilesListReader import *
+from LanguageEnumGenerator import *
+from LocalizedStringsParser import *
+from LocalizedStringGenerator import *
 
 parser = ArgumentParser()
 parser.add_argument("-s", "--source-path", dest="spath", type=str, help="Option to pass path to folder source code")
 parser.add_argument("-p", "--prefix", dest="prefix", type=str, help="Prefix for code", default="", nargs='?')
 
 args = parser.parse_args()
+args.spath = "/Users/iljakosynkin/Documents/Projects/tons-ios/Tons"
+'''
 if args.spath[-1] == '/' or args.spath == '\\':
     args.spath = args.spath[0: -1]
-
+'''
 configuration = read_configuration(args.spath)
 
-should_process_files = bool(configuration[PROCESS_FILES_KEY])
+should_process_files = configuration[PROCESS_FILES_KEY] == 'true'
 
 if should_process_files:
     generation_folder = str(configuration[GENERATED_FOLDER_NAME_KEY])
     generation_path = args.spath + '/' + generation_folder
+
+    if not os.path.exists(generation_path):
+        os.mkdir(generation_path)
 
     processed_files_path = generation_path + '/' + str(configuration[PROCESSED_FILES_NAME_KEY])
     processed_files = read_file(processed_files_path)
@@ -31,7 +38,7 @@ if should_process_files:
     pending_files = read_file(pending_files_path)
 
     table_name = configuration[LOCALIZATIONS_TABLE_NAME_KEY]
-    localization_path = configuration[LOCALIZATIONS_PATH_KEY]
+    localization_path = configuration.get(LOCALIZATIONS_PATH_KEY, None)
     last_update_timestamp = int(configuration[LAST_UPDATE_TIMESTAMP_KEY])
 
     configuration_modified = False
@@ -53,7 +60,7 @@ if should_process_files:
     paths = []
     localizations = []
 
-    should_change_r_string = bool(configuration[CHANGE_R_SWIFT_STRING_KEY])
+    should_change_r_string = configuration[CHANGE_R_SWIFT_STRING_KEY] == 'true'
 
     configuration[PROCESS_FILES_KEY] = False
     configuration_modified = True
@@ -81,7 +88,7 @@ if should_process_files:
 
                     search_for_path = False
 
-            if "Controller" in file_name or "View" in file_name or file_name in pending_files:
+            if ("Controller" in file_name or "View" in file_name or file_name in pending_files) and file_name.endswith(".swift"):
                 process_file(file_path, str(configuration[EVENT_BUS_NAME_KEY]))
 
             if should_change_r_string:
@@ -97,6 +104,7 @@ if should_process_files:
     if should_parse_strings:
         used_keys = parse(paths, configuration[TURN_TO_CAMEL_KEY])
         generate(generation_path, generated_file_name, used_keys, table_name)
+        generate_enum(generation_path, localizations)
 
     if configuration_modified:
         synchronize_configuration(args.spath, configuration)
