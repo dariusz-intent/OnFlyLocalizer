@@ -10,6 +10,17 @@
 		5F034B7E1E574D6D001D7C1C /* OnFlyLocalizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F034B741E574D6D001D7C1C /* OnFlyLocalizer.framework */; };
 		5F034B831E574D6D001D7C1C /* OnFlyLocalizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F034B821E574D6D001D7C1C /* OnFlyLocalizerTests.swift */; };
 		5F034B851E574D6D001D7C1C /* OnFlyLocalizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F034B771E574D6D001D7C1C /* OnFlyLocalizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F0CC26B1E58C602009C0564 /* Configuration.py in Resources */ = {isa = PBXBuildFile; fileRef = 5F0CC2601E58C602009C0564 /* Configuration.py */; };
+		5F0CC26C1E58C602009C0564 /* EventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0CC2611E58C602009C0564 /* EventBus.swift */; };
+		5F0CC26D1E58C602009C0564 /* FileProcessor.py in Resources */ = {isa = PBXBuildFile; fileRef = 5F0CC2621E58C602009C0564 /* FileProcessor.py */; };
+		5F0CC26E1E58C602009C0564 /* FilesListReader.py in Resources */ = {isa = PBXBuildFile; fileRef = 5F0CC2631E58C602009C0564 /* FilesListReader.py */; };
+		5F0CC26F1E58C602009C0564 /* LanguageEnumGenerator.py in Resources */ = {isa = PBXBuildFile; fileRef = 5F0CC2641E58C602009C0564 /* LanguageEnumGenerator.py */; };
+		5F0CC2701E58C602009C0564 /* LocalizedStringGenerator.py in Resources */ = {isa = PBXBuildFile; fileRef = 5F0CC2651E58C602009C0564 /* LocalizedStringGenerator.py */; };
+		5F0CC2711E58C602009C0564 /* LocalizedStringsParser.py in Resources */ = {isa = PBXBuildFile; fileRef = 5F0CC2661E58C602009C0564 /* LocalizedStringsParser.py */; };
+		5F0CC2721E58C602009C0564 /* localizer.sh in Resources */ = {isa = PBXBuildFile; fileRef = 5F0CC2671E58C602009C0564 /* localizer.sh */; };
+		5F0CC2731E58C602009C0564 /* OnFlyParser.py in Resources */ = {isa = PBXBuildFile; fileRef = 5F0CC2681E58C602009C0564 /* OnFlyParser.py */; };
+		5F0CC2741E58C602009C0564 /* Subscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0CC2691E58C602009C0564 /* Subscriber.swift */; };
+		5F0CC2751E58C602009C0564 /* WeakReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0CC26A1E58C602009C0564 /* WeakReference.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +40,17 @@
 		5F034B7D1E574D6D001D7C1C /* OnFlyLocalizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnFlyLocalizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F034B821E574D6D001D7C1C /* OnFlyLocalizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnFlyLocalizerTests.swift; sourceTree = "<group>"; };
 		5F034B841E574D6D001D7C1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F0CC2601E58C602009C0564 /* Configuration.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Configuration.py; sourceTree = "<group>"; };
+		5F0CC2611E58C602009C0564 /* EventBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventBus.swift; sourceTree = "<group>"; };
+		5F0CC2621E58C602009C0564 /* FileProcessor.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = FileProcessor.py; sourceTree = "<group>"; };
+		5F0CC2631E58C602009C0564 /* FilesListReader.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = FilesListReader.py; sourceTree = "<group>"; };
+		5F0CC2641E58C602009C0564 /* LanguageEnumGenerator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = LanguageEnumGenerator.py; sourceTree = "<group>"; };
+		5F0CC2651E58C602009C0564 /* LocalizedStringGenerator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = LocalizedStringGenerator.py; sourceTree = "<group>"; };
+		5F0CC2661E58C602009C0564 /* LocalizedStringsParser.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = LocalizedStringsParser.py; sourceTree = "<group>"; };
+		5F0CC2671E58C602009C0564 /* localizer.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = localizer.sh; sourceTree = "<group>"; };
+		5F0CC2681E58C602009C0564 /* OnFlyParser.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = OnFlyParser.py; sourceTree = "<group>"; };
+		5F0CC2691E58C602009C0564 /* Subscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscriber.swift; sourceTree = "<group>"; };
+		5F0CC26A1E58C602009C0564 /* WeakReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakReference.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +95,17 @@
 			children = (
 				5F034B771E574D6D001D7C1C /* OnFlyLocalizer.h */,
 				5F034B781E574D6D001D7C1C /* Info.plist */,
+				5F0CC2601E58C602009C0564 /* Configuration.py */,
+				5F0CC2611E58C602009C0564 /* EventBus.swift */,
+				5F0CC2621E58C602009C0564 /* FileProcessor.py */,
+				5F0CC2631E58C602009C0564 /* FilesListReader.py */,
+				5F0CC2641E58C602009C0564 /* LanguageEnumGenerator.py */,
+				5F0CC2651E58C602009C0564 /* LocalizedStringGenerator.py */,
+				5F0CC2661E58C602009C0564 /* LocalizedStringsParser.py */,
+				5F0CC2671E58C602009C0564 /* localizer.sh */,
+				5F0CC2681E58C602009C0564 /* OnFlyParser.py */,
+				5F0CC2691E58C602009C0564 /* Subscriber.swift */,
+				5F0CC26A1E58C602009C0564 /* WeakReference.swift */,
 			);
 			path = OnFlyLocalizer;
 			sourceTree = "<group>";
@@ -149,6 +182,7 @@
 					5F034B731E574D6D001D7C1C = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = RCNGG8L4U7;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					5F034B7C1E574D6D001D7C1C = {
@@ -181,6 +215,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F0CC26E1E58C602009C0564 /* FilesListReader.py in Resources */,
+				5F0CC26B1E58C602009C0564 /* Configuration.py in Resources */,
+				5F0CC2731E58C602009C0564 /* OnFlyParser.py in Resources */,
+				5F0CC2711E58C602009C0564 /* LocalizedStringsParser.py in Resources */,
+				5F0CC26D1E58C602009C0564 /* FileProcessor.py in Resources */,
+				5F0CC2701E58C602009C0564 /* LocalizedStringGenerator.py in Resources */,
+				5F0CC26F1E58C602009C0564 /* LanguageEnumGenerator.py in Resources */,
+				5F0CC2721E58C602009C0564 /* localizer.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +240,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F0CC26C1E58C602009C0564 /* EventBus.swift in Sources */,
+				5F0CC2751E58C602009C0564 /* WeakReference.swift in Sources */,
+				5F0CC2741E58C602009C0564 /* Subscriber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +367,7 @@
 		5F034B891E574D6D001D7C1C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = RCNGG8L4U7;
@@ -334,6 +380,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kappacino.inc.OnFlyLocalizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +388,7 @@
 		5F034B8A1E574D6D001D7C1C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = RCNGG8L4U7;
@@ -360,6 +408,7 @@
 		5F034B8C1E574D6D001D7C1C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = RCNGG8L4U7;
 				INFOPLIST_FILE = OnFlyLocalizerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +421,7 @@
 		5F034B8D1E574D6D001D7C1C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = RCNGG8L4U7;
 				INFOPLIST_FILE = OnFlyLocalizerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -400,6 +450,7 @@
 				5F034B8A1E574D6D001D7C1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F034B8B1E574D6D001D7C1C /* Build configuration list for PBXNativeTarget "OnFlyLocalizerTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +459,7 @@
 				5F034B8D1E574D6D001D7C1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
