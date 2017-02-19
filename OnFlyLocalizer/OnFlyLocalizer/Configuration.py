@@ -6,11 +6,11 @@ TURN_TO_CAMEL_KEY = 'TurnToCamelCharacters'
 CHANGE_R_SWIFT_STRING_KEY = 'ChangeRSwiftStrings'
 LOCALIZATIONS_PATH_KEY = 'LocalizationsPath'
 LOCALIZATIONS_TABLE_NAME_KEY = 'LocalizationsTable'
-LAST_UPDATE_TIMESTAMP_KEY = 'LastUpdateTimestamp'
 GENERATED_FOLDER_NAME_KEY = 'GeneratedFolderName'
 PROCESSED_FILES_NAME_KEY = 'ProcessedFileName'
 NEEDS_PROCESSING_FILES_NAME_KEY = 'PendingFilesFileName'
 PROCESS_FILES_KEY = 'ProcessFiles'
+PARSE_STRINGS_KEY = 'ParseStrings'
 EVENT_BUS_NAME_KEY = 'EventBus'
 
 def get_full_path_to_conf(path):
@@ -25,11 +25,11 @@ def generate_default_configuration(path):
     conf.write(TURN_TO_CAMEL_KEY + "=.-\n")
     conf.write(CHANGE_R_SWIFT_STRING_KEY + "=false\n")
     conf.write(LOCALIZATIONS_TABLE_NAME_KEY + "=Localizable\n")
-    conf.write(LAST_UPDATE_TIMESTAMP_KEY + "=0\n")
     conf.write(GENERATED_FOLDER_NAME_KEY + "=LanguageOnFlyChange\n")
     conf.write(PROCESSED_FILES_NAME_KEY + "=processed.txt\n")
     conf.write(NEEDS_PROCESSING_FILES_NAME_KEY + "=PendingFiles.txt\n")
     conf.write(PROCESS_FILES_KEY + "=false\n")
+    conf.write(PARSE_STRINGS_KEY + "=false\n")
     conf.write(EVENT_BUS_NAME_KEY + "=|\o/|+__+|/o\|\n")
 
     conf.close()
