@@ -37,7 +37,6 @@ pending_files = read_file(pending_files_path)
 
 table_name = configuration[LOCALIZATIONS_TABLE_NAME_KEY]
 localization_path = configuration.get(LOCALIZATIONS_PATH_KEY, None)
-last_update_timestamp = int(configuration[LAST_UPDATE_TIMESTAMP_KEY])
 configuration_modified = False
 search_for_path = False
 
