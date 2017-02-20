@@ -73,7 +73,7 @@ if should_process_files:
                     configuration_modified = True
                     search_for_path = False
 
-            if ("Controller" in file_name or "View" in file_name or file_name in pending_files) and file_name.endswith(".swift"):
+            if ("Controller" in file_name or "View" in file_name or file_name in pending_files) and file_name.endswith(".swift") and file_name not in processed_files:
                 process_file(file_path, str(configuration[EVENT_BUS_NAME_KEY]))
 
             if should_change_r_string:

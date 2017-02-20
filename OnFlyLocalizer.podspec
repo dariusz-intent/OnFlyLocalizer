@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.name         = "OnFlyLocalizer"
-  s.version      = "1.0.8"
+  s.version      = "1.0.0"
   s.summary      = "Lightweight library that simplyfying process of on-the-fly application localization"
 
   s.description  = <<-DESC
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.author             = { "Ilia Kosynkin" => "ilja.kosynkin@gmail.com" }
 
-  s.source       = { :git => "https://github.com/IljaKosynkin/OnFlyLocalizer.git", :tag => "v1.0.8" }
+  s.source       = { :git => "https://github.com/IljaKosynkin/OnFlyLocalizer.git", :tag => "v1.0.0" }
 
   s.source_files  = "OnFlyLocalizer", "OnFlyLocalizer/**/*.{h,m,py,swift,sh}"
   s.exclude_files = "Classes/Exclude"
