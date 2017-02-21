@@ -28,7 +28,7 @@ def generate_enum(path, localizations):
 
         enum_file.write("\tstatic func setCurrentLanguage(language: Language) {\n")
         enum_file.write("\t\tcurrentLanguage = language\n")
-        enum_file.write("\t\tUserDefaults.standard.set([language.rawValue] forKey: languageKey)\n")
+        enum_file.write("\t\tUserDefaults.standard.set([language.rawValue], forKey: languageKey)\n")
         enum_file.write("\t}\n\n")
 
         enum_file.write("}")

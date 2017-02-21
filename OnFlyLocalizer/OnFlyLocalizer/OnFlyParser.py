@@ -15,7 +15,6 @@ parser.add_argument("-s", "--source-path", dest="spath", type=str, help="Option 
 parser.add_argument("-p", "--prefix", dest="prefix", type=str, help="Prefix for code", default="", nargs='?')
 
 args = parser.parse_args()
-
 if args.spath[-1] == '/' or args.spath == '\\':
     args.spath = args.spath[0: -1]
 

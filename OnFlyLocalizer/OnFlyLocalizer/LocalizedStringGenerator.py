@@ -7,7 +7,7 @@ def generate(path, name, keys, table_name):
     generated_file.write("\tstatic var currentBundle: Bundle?\n")
     generated_file.write("\tstatic var currentLanguageCode: String?\n\n")
 
-    generated_file.write("\tfunc getBundle() -> Bundle {\n")
+    generated_file.write("\tstatic func getBundle() -> Bundle {\n")
     generated_file.write("\t\tlet code = Language.getCurrentLanguage().rawValue\n\n")
     generated_file.write("\t\tif let bundle = currentBundle, let currentLanguageCode = currentLanguageCode, currentLanguageCode == code {\n")
     generated_file.write("\t\t\treturn bundle\n")

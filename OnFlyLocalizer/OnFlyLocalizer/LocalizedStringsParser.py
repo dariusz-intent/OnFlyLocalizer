@@ -7,17 +7,16 @@ replacement_characters = []
 
 def convert_to_camel(key):
     splitted = re.split(splitting_characters, key)
+    converted = key
     if len(splitted) > 1:
         converted = splitted[0]
         for i in range(1, len(splitted)):
             converted += splitted[i].capitalize()
 
-        for pair in replacement_characters:
-            converted.replace(pair[0], pair[1])
+    for pair in replacement_characters:
+        converted = converted.replace(pair[0], pair[1])
 
-        return converted
-    else:
-        return key
+    return converted
 
 def parse(paths, camel_case_characters, replace_characters):
     global splitting_characters, replacement_characters
@@ -30,7 +29,7 @@ def parse(paths, camel_case_characters, replace_characters):
         splitting_characters += character
     splitting_characters += ']'
 
-    for i in range(len(replace_characters) / 2):
+    for i in range(int(len(replace_characters) / 2)):
         replacement_characters.append([replace_characters[i], replace_characters[i + 1]])
 
     used_keys = {}

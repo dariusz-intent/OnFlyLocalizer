@@ -24,7 +24,7 @@ def generate_default_configuration(path):
     conf = open(get_full_path_to_conf(path), 'w+')
 
     conf.write(TURN_TO_CAMEL_KEY + "=_-\n")
-    conf.write(TURN_TO_CAMEL_KEY + "=._\n")
+    conf.write(REPLACEMENTS_KEY + "=._\n")
     conf.write(CHANGE_R_SWIFT_STRING_KEY + "=false\n")
     conf.write(LOCALIZATIONS_TABLE_NAME_KEY + "=Localizable\n")
     conf.write(GENERATED_FOLDER_NAME_KEY + "=LanguageOnFlyChange\n")
