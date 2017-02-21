@@ -3,6 +3,7 @@ import os
 CONFIGURATION_NAME = 'OnFlyLocalizer.conf'
 
 TURN_TO_CAMEL_KEY = 'TurnToCamelCharacters'
+REPLACEMENTS_KEY = 'ReplacementsCharacters'
 CHANGE_R_SWIFT_STRING_KEY = 'ChangeRSwiftStrings'
 LOCALIZATIONS_PATH_KEY = 'LocalizationsPath'
 LOCALIZATIONS_TABLE_NAME_KEY = 'LocalizationsTable'
@@ -22,7 +23,8 @@ def get_full_path_to_conf(path):
 def generate_default_configuration(path):
     conf = open(get_full_path_to_conf(path), 'w+')
 
-    conf.write(TURN_TO_CAMEL_KEY + "=.-\n")
+    conf.write(TURN_TO_CAMEL_KEY + "=_-\n")
+    conf.write(TURN_TO_CAMEL_KEY + "=._\n")
     conf.write(CHANGE_R_SWIFT_STRING_KEY + "=false\n")
     conf.write(LOCALIZATIONS_TABLE_NAME_KEY + "=Localizable\n")
     conf.write(GENERATED_FOLDER_NAME_KEY + "=LanguageOnFlyChange\n")

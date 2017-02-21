@@ -73,7 +73,7 @@ if should_process_files:
                     configuration_modified = True
                     search_for_path = False
 
-            if ("Controller" in file_name or "View" in file_name or file_name in pending_files) and file_name.endswith(".swift") and file_name not in processed_files:
+            if ("Controller" in file_name or "View" in file_name or file_name in pending_files) and file_name.endswith(".swift"):
                 process_file(file_path, str(configuration[EVENT_BUS_NAME_KEY]))
 
             if should_change_r_string:
@@ -103,7 +103,11 @@ elif should_parse_strings:
                     search_for_path = False
 
 if should_parse_strings:
-    used_keys = parse(paths, configuration[TURN_TO_CAMEL_KEY])
+    replacements = configuration[REPLACEMENTS_KEY]
+    if len(replacements) % 2 != 0:
+        raise Exception("Replaced characters length is not even")
+
+    used_keys = parse(paths, configuration[TURN_TO_CAMEL_KEY], replacements)
     generate(generation_path, generated_file_name, used_keys, table_name)
     generate_enum(generation_path, localizations)
 

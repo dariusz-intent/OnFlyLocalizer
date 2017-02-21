@@ -2,6 +2,7 @@ import re
 
 escaped_characters = ".?+*|()\\[]"
 splitting_characters = ""
+replacement_characters = []
 
 
 def convert_to_camel(key):
@@ -10,12 +11,16 @@ def convert_to_camel(key):
         converted = splitted[0]
         for i in range(1, len(splitted)):
             converted += splitted[i].capitalize()
+
+        for pair in replacement_characters:
+            converted.replace(pair[0], pair[1])
+
         return converted
     else:
         return key
 
-def parse(paths, camel_case_characters):
-    global splitting_characters
+def parse(paths, camel_case_characters, replace_characters):
+    global splitting_characters, replacement_characters
 
     camel_case = str(camel_case_characters)
     splitting_characters = r"["
@@ -25,6 +30,8 @@ def parse(paths, camel_case_characters):
         splitting_characters += character
     splitting_characters += ']'
 
+    for i in range(len(replace_characters) / 2):
+        replacement_characters.append([replace_characters[i], replace_characters[i + 1]])
 
     used_keys = {}
     for path in paths:

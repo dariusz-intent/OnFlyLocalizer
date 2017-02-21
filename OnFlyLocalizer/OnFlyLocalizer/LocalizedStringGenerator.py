@@ -2,23 +2,24 @@ def generate(path, name, keys, table_name):
     generated_file = open(path + "/" + name + ".swift", 'w+')
     generated_file.write("import Foundation\n\n")
 
-    generated_file.write("static var currentBundle: Bundle?\n")
-    generated_file.write("static var currentLanguageCode: String?\n\n")
-
-    generated_file.write("func getBundle() -> Bundle {\n")
-    generated_file.write("\tlet code = Language.getCurrentLanguage().rawValue\n\n")
-    generated_file.write("\tif let bundle = currentBundle, let currentLanguageCode = currentLanguageCode, currentLanguageCode == code {\n")
-    generated_file.write("\t\treturn bundle\n")
-    generated_file.write("\t}\n\n")
-    generated_file.write("\tif let path = Bundle.main.path(forResource: code, ofType: \".lproj\"), let bundle = Bundle(path: path) {\n")
-    generated_file.write("\t\tcurrentBundle = bundle\n")
-    generated_file.write("\t\tcurrentLanguageCode = code\n")
-    generated_file.write("\t\treturn bundle\n")
-    generated_file.write("\t}\n\n")
-    generated_file.write("\treturn Bundle.main\n")
-    generated_file.write("}\n\n")
-
     generated_file.write("class " + name + " {\n")
+
+    generated_file.write("\tstatic var currentBundle: Bundle?\n")
+    generated_file.write("\tstatic var currentLanguageCode: String?\n\n")
+
+    generated_file.write("\tfunc getBundle() -> Bundle {\n")
+    generated_file.write("\t\tlet code = Language.getCurrentLanguage().rawValue\n\n")
+    generated_file.write("\t\tif let bundle = currentBundle, let currentLanguageCode = currentLanguageCode, currentLanguageCode == code {\n")
+    generated_file.write("\t\t\treturn bundle\n")
+    generated_file.write("\t\t}\n\n")
+    generated_file.write("\t\tif let path = Bundle.main.path(forResource: code, ofType: \".lproj\"), let bundle = Bundle(path: path) {\n")
+    generated_file.write("\t\t\tcurrentBundle = bundle\n")
+    generated_file.write("\t\t\tcurrentLanguageCode = code\n")
+    generated_file.write("\t\t\treturn bundle\n")
+    generated_file.write("\t\t}\n\n")
+    generated_file.write("\t\treturn Bundle.main\n")
+    generated_file.write("\t}\n\n")
+
     for key in keys:
         value = keys[key]
         generated_file.write("\tstatic func " + value[0] + "(" + value[1] + ") -> String {\n")
