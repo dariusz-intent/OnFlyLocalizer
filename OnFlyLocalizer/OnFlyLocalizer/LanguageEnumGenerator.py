@@ -13,7 +13,7 @@ def generate_enum(path, localizations):
 
         for localization in localizations:
             enum_file.write("\tcase " + localization + " = \"" + localization + "\"\n")
-        enum_file.write("\tcase Undefined = \"\"\n\n")
+        enum_file.write("\n")
 
         enum_file.write("\tstatic func getCurrentLanguage() -> Language {\n")
         enum_file.write("\t\tif let language = currentLanguage {\n")
@@ -23,7 +23,7 @@ def generate_enum(path, localizations):
         enum_file.write("\t\t\tcurrentLanguage = language\n")
         enum_file.write("\t\t\treturn language\n")
         enum_file.write("\t\t}\n\n")
-        enum_file.write("\t\treturn .Undefined\n")
+        enum_file.write("\t\treturn .en\n")
         enum_file.write("\t}\n\n")
 
         enum_file.write("\tstatic func setCurrentLanguage(language: Language) {\n")
