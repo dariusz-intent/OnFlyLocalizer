@@ -12,12 +12,14 @@ public class EventBus {
     private var subscribers: [Int: [WeakReference<Subscriber>]] = [Int: [WeakReference<Subscriber>]]()
     
     public func register(subscriber: Subscriber, forEvent: Int) {
+        //sdfsdf
         if subscribers[forEvent] == nil {
             subscribers[forEvent] = [WeakReference<Subscriber>]()
         }
         
         subscribers[forEvent]?.append(WeakReference(value: subscriber))
     }
+    
     
     public func eventFired(eventCode: Int, associatedObject: Any?) {
         guard let references = subscribers[eventCode] else { return }
